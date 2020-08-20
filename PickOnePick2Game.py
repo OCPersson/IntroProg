@@ -5,13 +5,14 @@ sticks = random.randint(15, 25)
 player = 1
 
 while True:
-    nmbOfPlayers = int(input("Choose 1 or 2 players "))
+    nmbOfPlayers = input("Choose 1 or 2 players: ")
 
     try:
         if int(nmbOfPlayers) < 1 or int(nmbOfPlayers) > 2:
             print("Please choose a number between 1 and 2")
 
         else:
+            nmbOfPlayers = int(nmbOfPlayers)
             break
 
     except ValueError:
@@ -46,7 +47,6 @@ while True:
 
         print("|", end="")
         tempSticks = tempSticks-1
-    #print(str(sticks)+" sticks remain.")
 
     while True:
 
@@ -79,7 +79,6 @@ while True:
 
             print(" AI removes " + str(removed) + " sticks")
 
-
         try:
             checkRemoved = int(removed)
             if checkRemoved < 1 or checkRemoved > 2:
@@ -105,10 +104,3 @@ while True:
 
     else:
         player = 1
-
-
-
-
-
-
-
